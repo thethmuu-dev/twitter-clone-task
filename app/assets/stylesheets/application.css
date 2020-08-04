@@ -26,6 +26,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #1da1f2;
 }
 
 label {
@@ -54,7 +55,30 @@ div.card {
   position: relative;
 }
 
-input[type = "submit"] {
+.windows_btn {
+  font-size: 2.5rem;
+  position: absolute;
+}
+
+#btn_show {
+  top: -10px;
+  right: 40px;
+  color: #000;
+}
+
+#btn_edit {
+  top: -10px;
+  right: 20px;
+  color: #008080;
+}
+
+#btn_del {
+  top: -10px;
+  right: 0px;
+  color: #f33434;
+}
+
+.btn_tweet {
   border: none;
   font-weight: bold;
   background: #1da1f2;
@@ -65,14 +89,14 @@ input[type = "submit"] {
   cursor: pointer;
 }
 
-input[type = "submit"]:hover {
+.btn_tweet:hover {
   background-color: #1299ec;
 }
 
-input[type = "submit"]:active {
+.btn_tweet:active {
   transform: scale(1.02);
 }
 
-.tweet_content, input[type="submit"] {
+.tweet_content, .btn_tweet {
   margin: 15px 0;
 }
