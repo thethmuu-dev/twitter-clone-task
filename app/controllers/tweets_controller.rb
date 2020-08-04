@@ -36,6 +36,10 @@ class TweetsController < ApplicationController
     redirect_to tweets_path, notice: "Tweet Deleted"
   end
 
+  def confirm
+    @tweet = Tweet.new(tweet_params)
+  end
+
   private
   def tweet_params
   params.require(:tweet).permit(:content)

@@ -1,0 +1,6 @@
+<h3>Save with the following content.</h3>
+<%= form_with(model: @tweet, local: true) do |form| %>
+<%= form.hidden_field :content %>
+<p>Tweet:<%= @tweet.content %></p>
+<%= form.submit "Tweet", class: "btn_tweet" %>
+<% end %>
