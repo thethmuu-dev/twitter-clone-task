@@ -1,0 +1,58 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  margin: 0;
+  padding: 0;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.tweet_content {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+textarea {
+  height: 100px;
+}
+
+div.btn_wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+input[type = "submit"] {
+  border: none;
+  font-weight: bold;
+  background: rgb(29, 161, 242);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type = "submit"]:hover {
+  transform: scale(1.01);
+}
+
+.tweet_content, input[type="submit"] {
+  margin: 15px 0;
+}
