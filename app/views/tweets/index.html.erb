@@ -1,0 +1,10 @@
+<h1>All Tweets</h1>
+<p style="color: green;"><%= notice %></p>
+<% @tweets.each do |blog| %>
+<div class="card">
+
+  <%= blog.content %>
+</div>
+<% end %><br><br>
+
+<p class="shadow"><%= link_to  "New Tweet", new_tweet_path %></p>

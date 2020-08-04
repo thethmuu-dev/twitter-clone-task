@@ -14,7 +14,6 @@
  *= require_self
  */
 body {
-  margin: 0;
   padding: 0;
   width: 960px;
   margin: 0 auto;
@@ -25,12 +24,21 @@ body {
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+}
+
 label {
   margin-bottom: 5px;
 }
 
 textarea {
   height: 100px;
+  border: none;
+  outline: none;
+  padding: 20px;
+  box-shadow: 1px 1px 4px -2px rgba(0,0,0,0.75);
+  border-radius: 5px;
 }
 
 div.btn_wrapper {
@@ -38,10 +46,18 @@ div.btn_wrapper {
   justify-content: flex-end;
 }
 
+div.card {
+  padding: 15px 20px;
+  box-shadow: 1px 1px 4px -2px rgba(0,0,0,0.75);
+  margin-bottom: 30px;
+  border-radius: 5px;
+  position: relative;
+}
+
 input[type = "submit"] {
   border: none;
   font-weight: bold;
-  background: rgb(29, 161, 242);
+  background: #1da1f2;
   color: #fff;
   padding: 10px 20px;
   border-radius: 20px;
@@ -50,7 +66,11 @@ input[type = "submit"] {
 }
 
 input[type = "submit"]:hover {
-  transform: scale(1.01);
+  background-color: #1299ec;
+}
+
+input[type = "submit"]:active {
+  transform: scale(1.02);
 }
 
 .tweet_content, input[type="submit"] {
