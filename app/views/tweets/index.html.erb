@@ -1,12 +1,14 @@
 <h1>All Tweets</h1>
 <p style=" color: green;"><%= notice %></p>
 <% @tweets.each do |tweet| %>
-<div class="card">
-  <%= tweet.content %>
-  <%= link_to raw("&#8728;"), tweet_path(tweet.id), class: "windows_btn", id: "btn_show" %>
-  <%= link_to raw("&#8728;"), edit_tweet_path(tweet.id), class: "windows_btn", id: "btn_edit" %>
-  <%= link_to raw("&#8728;"), tweet_path(tweet.id), method: :delete ,class: "windows_btn", id: "btn_del", data: { confirm: 'Delete this tweet?' } %>
-</div>
+<a href="/tweets/<%= tweet.id %>" class="black">
+  <div class="card">
+    <%= tweet.content %>
+    <%= link_to raw("&#8728;"), tweet_path(tweet.id), class: "windows_btn", id: "btn_show" %>
+    <%= link_to raw("&#8728;"), edit_tweet_path(tweet.id), class: "windows_btn", id: "btn_edit" %>
+    <%= link_to raw("&#8728;"), tweet_path(tweet.id), method: :delete ,class: "windows_btn", id: "btn_del", data: { confirm: 'Delete this tweet?' } %>
+  </div>
+</a>
 <% end %><br>
 
-<p class="shadow"><%= link_to  "New Tweet", new_tweet_path, class: "btn_tweet" %></p>
+<p class=" shadow"><%= link_to  "New Tweet", new_tweet_path, class: "btn_tweet" %></p>

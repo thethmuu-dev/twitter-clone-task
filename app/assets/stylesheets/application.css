@@ -41,6 +41,10 @@ a {
   color: #1da1f2;
 }
 
+.black {
+  color: #000;
+}
+
 label {
   margin-bottom: 5px;
 }
