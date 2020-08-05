@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TwitterCloneTask</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>Twitter Clone Task</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header>
+    <a href="/tweets" class="logo">
+      <%= image_tag  "/logo.png", width: "30px" %>
+    </a>
+    <div class="nav_link">
+      <a href="/tweets">Home</a>
+      <a href="/tweets/new">New Tweet</a>
+    </div>
+  </header>
+  <%= yield %>
+  <footer>
+    Dive into Code &copy; 2020
+  </footer>
+</body>
+
 </html>
